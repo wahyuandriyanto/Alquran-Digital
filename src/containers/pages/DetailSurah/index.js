@@ -27,7 +27,7 @@ function DetailSurah() {
           if (toggle === "play") {
             audio.play();
           } else {
-            document.location.reload(true);
+            window.location.reload();
           }
         }
       });
