@@ -1,0 +1,42 @@
+.header {
+  width: 100%;
+  position: relative;
+  &__bg {
+    background: url("../../../assets/img/alquran.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 75%;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+    &-text {
+      position: absolute;
+      top: 25%;
+      left: 24px;
+      & .text-title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 36px;
+      }
+      & .text-desc {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+  &__search {
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px #e5e4e6;
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: -24px;
+    border-radius: 16px;
+    &-container {
+      padding: 24px;
+      position: relative;
+    }
+  }
+}

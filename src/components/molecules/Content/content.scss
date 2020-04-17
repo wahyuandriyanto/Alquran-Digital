@@ -1,0 +1,12 @@
+.content {
+  padding: 56px 24px 24px;
+  &__title {
+    color: rgb(0, 197, 101);
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid;
+  }
+  &__detail {
+      padding-top: 24px;
+  }
+}

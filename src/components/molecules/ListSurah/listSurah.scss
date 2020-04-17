@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  & td {
+    text-align: left;
+    border-bottom: 1px solid #dadce0;
+    padding: 8px 4px;
+
+    &:first-child {
+      padding-right: 8px;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  & tr {
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 197, 101, 0.2);
+    }
+    &:active {
+      opacity: 0.2;
+    }
+  }
+}
