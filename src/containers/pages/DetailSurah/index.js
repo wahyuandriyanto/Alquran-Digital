@@ -3,7 +3,7 @@ import { useFetch } from "../../../config/API";
 import "./detailSurah.scss";
 import Nav from "../../../components/atoms/Nav";
 import { useParams } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 function DetailSurah() {
   const [toggle, setToggle] = useState("play");
@@ -27,7 +27,7 @@ function DetailSurah() {
           if (toggle === "play") {
             audio.play();
           } else {
-            document.location.reload(true);  
+            document.location.reload(true);
           }
         }
       });
@@ -37,6 +37,9 @@ function DetailSurah() {
 
   return (
     <React.Fragment>
+      <Helmet>
+        <title>Surah {surah}</title>
+      </Helmet>
       <Nav surah={surah} handleClick={handleClick} class={toggle} />
       {loading ? <div className="loading">Loading...</div> : ""}
       <div className="detail-surah">
