@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./listSurah.scss";
 import { useFetch } from "../../../config/API";
+import { Link } from "react-router-dom";
 
 function ListSurah(props) {
-
   const [data, loading] = useFetch(
     "https://al-quran-8d642.firebaseio.com/data.json"
   );
-  
-  const listFilter = data.filter((list) => {
-      if (list.nama.toLowerCase().search(props.keyword.toLowerCase()) !== -1) return list;
+  const handleClick = (e) => {
+    localStorage.setItem("Surah", e.target.innerHTML);
+  };
+
+  const listFilter = data
+    .filter((list) => {
+      if (list.nama.toLowerCase().search(props.keyword.toLowerCase()) !== -1)
+        return list;
     })
     .map((list) => {
       return (
         <tr>
           <td>{list.nomor}</td>
-          <td>{list.nama}</td>
+          <td>
+            <Link to={`/detail/${list.nomor}`} onClick={handleClick}>
+              {list.nama}
+            </Link>
+          </td>
           <td>{list.asma}</td>
         </tr>
       );

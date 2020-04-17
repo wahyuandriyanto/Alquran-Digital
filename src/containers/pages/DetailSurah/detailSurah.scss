@@ -1,0 +1,15 @@
+.detail-surah, .loading {
+  padding: 72px 24px 24px;
+  &__content {
+    padding: 8px 0;
+    border-bottom: 1px solid #dadce0;
+    &-ar {
+      text-align: right;
+      padding-bottom: 8px;
+      font-size: 16px;
+    }
+    &-id {
+      font-size: 12px;
+    }
+  }
+}
