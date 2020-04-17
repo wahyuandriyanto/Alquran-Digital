@@ -33,8 +33,22 @@
       width: 24px;
       height: 24px;
     }
+    & #play {
+      display: block;
+    }
+    & #stop {
+      display: none;
+    }
     &:active {
       opacity: 0.2;
+    }
+  }
+  & .stop {
+    & #play {
+      display: none;
+    }
+    & #stop {
+      display: block;
     }
   }
 }
