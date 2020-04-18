@@ -11,6 +11,7 @@ function useFetch(url) {
   }
   useEffect(() => {
     fetchUrl();
+    window.scrollTo(0, 0)
   }, []);
   return [data, loading];
 }

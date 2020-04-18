@@ -5,6 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import App from "./containers/pages/App";
 import { Helmet } from "react-helmet";
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <meta name="description" content="Read & Listen Everywhere" />
     </Helmet>
     <App />
+  
   </React.StrictMode>,
   document.getElementById("root")
 );
