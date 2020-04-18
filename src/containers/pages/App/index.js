@@ -17,9 +17,9 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     height: "54px",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#fafafa",
     color: "#10003c",
-    boxShadow: "0 2px 2px 0 hsla(0,0%,76.9%,.5), 0 2px 4px 0 rgba(0,0,0,.12)",
+    boxShadow: "0 -3px 5px -5px #333",
   },
   selected: {
     fontFamily: "Poppins",
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
 function App() {
   const classes = useStyles();
-  const [value, setValue] = React.useState("recents");
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -41,25 +41,25 @@ function App() {
       <BottomNavigation
         value={value}
         onChange={handleChange}
+        showLabels
         className={classes.root}
       >
         <BottomNavigationAction
           classes={{ selected: classes.selected }}
           label="Al-Quran"
-          value="alquran"
           component={Link}
           to="/"
-          icon={<ImportContactsRoundedIcon />}
+          icon={<ImportContactsRoundedIcon fontSize="small" />}
         />
         <BottomNavigationAction
           classes={{ selected: classes.selected }}
           label="Sholat"
-          value="sholat"
           component={Link}
           to="/sholat"
-          icon={<QueryBuilderRoundedIcon />}
+          icon={<QueryBuilderRoundedIcon fontSize="small" />}
         />
       </BottomNavigation>
+
       <div>
         <Route path="/" exact component={Dashboard} />
         <Route path="/detail/:id" component={DetailSurah} />
