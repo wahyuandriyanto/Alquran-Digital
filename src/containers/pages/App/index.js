@@ -27,6 +27,10 @@ const useStyles = makeStyles({
     color: "#00c565 !important",
     fontWeight: "500",
   },
+  label: {
+    fontFamily: "Poppins",
+    color: "#10003c"
+  }
 });
 
 function App() {
@@ -45,14 +49,14 @@ function App() {
         className={classes.root}
       >
         <BottomNavigationAction
-          classes={{ selected: classes.selected }}
+          classes={{ selected: classes.selected, label: classes.label }}
           label="Al-Quran"
           component={Link}
           to="/"
           icon={<ImportContactsRoundedIcon fontSize="small" />}
         />
         <BottomNavigationAction
-          classes={{ selected: classes.selected }}
+          classes={{ selected: classes.selected, label: classes.label }}
           label="Sholat"
           component={Link}
           to="/sholat"

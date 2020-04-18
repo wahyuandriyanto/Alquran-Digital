@@ -4,6 +4,7 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import App from "./containers/pages/App";
 import { Helmet } from "react-helmet";
+import UpButton from "./components/atoms/UpButton";
 
 
 ReactDOM.render(
@@ -13,7 +14,7 @@ ReactDOM.render(
       <meta name="description" content="Read & Listen Everywhere" />
     </Helmet>
     <App />
-  
+    <UpButton />
   </React.StrictMode>,
   document.getElementById("root")
 );
