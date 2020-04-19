@@ -24,8 +24,11 @@
   }
 }
 .hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1000ms, visibility 1000ms;
 }
 .show {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }

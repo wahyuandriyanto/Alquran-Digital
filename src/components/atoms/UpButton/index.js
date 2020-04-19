@@ -9,7 +9,7 @@ function UpButton() {
   });
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    if (currentScrollPos > 300) {
+    if (currentScrollPos > 250) {
       setVisibility("show");
     } else {
       setVisibility("hidden");
