@@ -29,8 +29,8 @@ const useStyles = makeStyles({
   },
   label: {
     fontFamily: "Poppins",
-    color: "#10003c"
-  }
+    color: "#10003c",
+  },
 });
 
 function App() {
@@ -42,6 +42,9 @@ function App() {
   };
   return (
     <Router>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/detail/:id" component={DetailSurah} />
+        <Route path="/sholat" component={Sholat} />
       <BottomNavigation
         value={value}
         onChange={handleChange}
@@ -63,12 +66,6 @@ function App() {
           icon={<QueryBuilderRoundedIcon fontSize="small" />}
         />
       </BottomNavigation>
-
-      <div>
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/detail/:id" component={DetailSurah} />
-        <Route path="/sholat" component={Sholat} />
-      </div>
     </Router>
   );
 }

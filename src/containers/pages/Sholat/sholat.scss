@@ -1,7 +1,123 @@
-.sholat {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.jadwal-sholat {
+  width: 100%;
+  height: 100vh;
+  &__header {
+    color: #ffffff;
+    position: relative;
+    &-bg {
+      background-image: linear-gradient(180deg, #4ac14b, #06853a);
+      padding: 24px 24px 184px;
+      border-bottom-left-radius: 64px;
+      border-bottom-right-radius: 64px;
+      @media only screen and (max-width: 475px) {
+        padding: 24px 24px 122px;
+      }
+      @media only screen and (max-width: 320px) {
+        padding: 12px 24px 85px
+      }
+    }
+    &-title {
+      text-align: center;
+      & .title-page {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      & .title-loc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        & img {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+        }
+      }
+    }
+    &-countdown {
+      margin-top: 36px;
+      display: flex;
+      justify-content: center;
+      & .countdown {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        border: 8px solid rgba(255, 255, 255, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__current {
+          text-align: center;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+          margin-top: -5px;
+          & div {
+            display: none;
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+        &__next {
+          text-align: center;
+          font-size: 14px;
+          text-transform: lowercase;
+          &-detail {
+            display: none;
+            &:first-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    &-detail {
+      color: #10003c;
+      background-color: #ffffff;
+      box-shadow: 0 8px 24px #e5e4e6;
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: -84px;
+      border-radius: 16px;
+      & .jadwal-detail {
+        padding: 24px;
+        &__row {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          &-detail {
+            flex: 1;
+            border-left: 1px solid #dadce0;
+            &:last-child {
+              border-right: 1px solid #dadce0;
+            }
+            & .detail-name {
+              color: #00c565;
+              font-weight: 700;
+            }
+            & .detail-time {
+              font-size: 12px;
+            }
+          }
+          &:first-child {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #dadce0;
+          }
+          &:last-child {
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+  }
 }
