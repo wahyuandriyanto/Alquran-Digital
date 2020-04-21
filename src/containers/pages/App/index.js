@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Dashboard from "../Dashboard";
 import DetailSurah from "../DetailSurah";
@@ -35,8 +35,8 @@ const useStyles = makeStyles({
 
 function App() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
+  const [value, setValue] = useState("");
+  
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

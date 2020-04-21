@@ -1,6 +1,9 @@
 .jadwal-sholat {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  @media only screen and (max-width: 475px) {
+    padding-bottom: 72px;
+  }
   &__header {
     color: #ffffff;
     position: relative;
@@ -17,6 +20,7 @@
       }
     }
     &-title {
+      position: relative;
       text-align: center;
       & .title-page {
         font-size: 20px;
@@ -32,6 +36,11 @@
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:active{
+          opacity: 0.2;
+        }
         & img {
           width: 20px;
           height: 20px;
@@ -103,7 +112,7 @@
             }
             & .detail-name {
               color: #00c565;
-              font-weight: 700;
+              font-weight: 500;
             }
             & .detail-time {
               font-size: 12px;

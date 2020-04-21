@@ -1,0 +1,26 @@
+.search {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 75px;
+  border-radius: 50rem;
+  z-index: 99999;
+  &__result {
+      background-color: #ffffff;
+      color: #10003c;
+      max-height: 200px;
+      overflow: hidden;
+      border-radius: 24px;
+      margin-top: 16px;
+      box-sizing: border-box;
+      & ul {
+          padding-inline-start: 24px;
+          list-style: none;
+          & li {
+              text-align: left;
+              line-height: 35px;
+              cursor: pointer;
+          }
+      }
+  }
+}
