@@ -10,6 +10,7 @@ function Nav(props) {
 
   const handleClick = () => {
     history.push("/");
+    window.scrollTo(0, 0)
   };
 
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./listSurah.scss";
-import { useFetch } from "../../../config/API";
 import { Link } from "react-router-dom";
 import json from "../../../Json/allSurat.json";
 

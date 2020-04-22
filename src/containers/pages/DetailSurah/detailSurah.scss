@@ -1,12 +1,38 @@
-.detail-surah, .loading {
+.detail-surah,
+.loading {
   padding: 72px 24px;
   &__content {
     padding: 8px 0;
     border-bottom: 1px solid #dadce0;
     &-ar {
-      text-align: right;
+      display: flex;
+      align-items: flex-start;
       padding-bottom: 8px;
-      font-size: 16px;
+      & .ayat {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        cursor: pointer;
+        &:active {
+          opacity: 0.2;
+        }
+        & img {
+          width: 24px;
+          height: 24px;
+        }
+        & span {
+          position: absolute;
+          font-size: 10px;
+          top: 5px;
+        }
+      }
+      & .arab {
+        text-align: right;
+        font-size: 16px;
+        flex: 1 1 auto;
+      }
     }
     &-id {
       font-size: 12px;
