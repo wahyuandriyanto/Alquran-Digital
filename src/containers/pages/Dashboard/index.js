@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../../components/molecules/Header";
 import Content from "../../../components/molecules/Content";
+import Hadist from "../../../components/molecules/Hadist";
 
 function Dashboard() {
   const [keyword, setKeyword] = useState("");
@@ -10,6 +11,7 @@ function Dashboard() {
   return (
     <React.Fragment>
       <Header keyword={keyword} handleChange={handleChange}/>
+      <Hadist />
       <Content title="Surah" keyword={keyword}/>
     </React.Fragment>
   );

@@ -7,9 +7,7 @@ const history = () => {
   if (localStorage.getItem("idSurat")) {
     return (
       <Link
-        to={`/detail/${localStorage.getItem("idSurat")}#${localStorage.getItem(
-          "idAyat"
-        )}`}
+        to={`/detail/${localStorage.getItem("idSurat")}`}
       >
         <div className="history">
           Terakhir dibaca [{localStorage.getItem("idSurat")}:
